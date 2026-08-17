@@ -1,0 +1,6 @@
+data/*.csv
+data/*.png
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
