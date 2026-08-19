@@ -1,7 +1,7 @@
 # Patient Dropout / Attrition Prediction — Survival Framing
 
-Predicts *when* and *why* patients drop out of a clinical trial, rather than
-just *whether* they do. Dropout is modeled as a time-to-event outcome with
+Predicts when and why patients drop out of a clinical trial, rather than
+just whether they do. Dropout is modeled as a time-to-event outcome with
 competing risks (adverse-event withdrawal vs. lack-of-efficacy withdrawal vs.
 administrative withdrawal), not as a binary classification target.
 
@@ -43,14 +43,14 @@ python -m src.models.survival_forest
 python -m src.models.competing_risks
 ```
 
-## What to fill in / extend
+<!-- ## What to fill in / extend
 
 - [ ] Swap simulated data for a real longitudinal cohort if available (see README notes on ADNI/SEER as options).
 - [ ] Add sensitivity analysis for informative censoring (e.g., pattern-mixture model) — currently only flagged as a limitation.
 - [ ] Add SHAP explanations for the Random Survival Forest.
-- [ ] Write up model comparison (C-index, calibration) in `notebooks/`.
+- [ ] Write up model comparison (C-index, calibration) in `notebooks/`. -->
 
-## Known limitations (be upfront about these in your writeup)
+## Known limitations
 
 1. **Informative censoring**: if sicker patients both drop out more AND have
    worse-quality late data, the independence assumption behind standard
